@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+   *,*::after,*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body{
+   background-color: #1da0de;
+ }
+@keyframes eyemove{
+  20%{
+    margin: 0 0 0 0;
+  }
+  40%{
+    margin: -22px 0 0 0;
+  }
+  60%{
+    margin: -22px 0 0 3px;
+  }
+  80%{
+    margin: -22px 10px 0 0 ;
+  }
+}
+#demo1{
+  position: fixed;
+  width: 50%;
+  height: 100vh;
+  background-color: #1da0de;
+  overflow-y: scroll;
+  padding-left:30px;
+}
+#demo1::-webkit-scrollbar{
+      /* 有滚动条隐藏了，但是可以滚 */
+      display: none;
+}
+#demo2{
+  position: fixed;
+  top:0;
+  right:0;
+  width: 50%;
+  height: 100vh;
+}
+.duola{
+  margin-left:500px;
+}
+.btns{
+  position: absolute;
+  top: 15px;
+  left:50%;
+  margin-left: -58px;
+  display: flex;
+  flex-direction: column;
+}
+.btns button{
+  padding: 0 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+audio{
+  position: absolute;
+}
+  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <!-- <link rel="stylesheet" href="./index.css"> -->
+  <title>哆啦A梦</title>
+</head>
+<body>
+  <div id="demo1"></div>
+  <div id="demo2"></div>
+  <div class="btns">
+    <button id="btn-pause">暂停</button>
+    <button id="btn-play">播放</button>
+    <button id="btn-slow">慢速</button>
+    <button id="btn-normal">中速</button>
+    <button id="btn-fast">快速</button>
+  </div>
+  <div class="duola">
+    <div class="head">
+      <div class="face"></div>
+      <div class="eye eye-left">
+        <div class="yanzhu yanzhu-left"></div>
+      </div>
+      <div class="eye eye-right">
+        <div class="yanzhu yanzhu-right"></div>
+      </div>
+      <div class="nose"></div>
+      <div class="top-mouth"></div>
+      <div class="bottom-mouth"></div>
+      <div class="bottom-mouth-left"></div>
+      <div class="bottom-mouth-right"></div>
+      <div class="huzi huzi-left">
+        <div class="huzi-left-top"></div>
+        <div class="huzi-left-middle"></div>
+        <div class="huzi-left-bottom"></div>
+      </div>
+      <div class="huzi huzi-right">
+        <div class="huzi-right-top"></div>
+        <div class="huzi-right-middle"></div>
+        <div class="huzi-right-bottom"></div>
+      </div>
+    </div>
+    <div class="bell-rope">
+      <div class="bell">
+        <div class="bell_line"></div>
+        <div class="bell_circle"></div>
+        <div class="bell_under"></div>
+        <div class="bell_light"></div>
+      </div>
+    </div>
+   
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
